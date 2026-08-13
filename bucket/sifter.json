@@ -1,0 +1,40 @@
+{
+    "version": "0.3.93",
+    "description": "One library and one Play button for every game you own. Sifter puts every game you own in one library and launches any of it from one place. It finds what is installed on your PC across Steam, Epic, GOG, Xbox, EA, Ubisoft, Battle.net, Amazon and itch.io, and signing in to Steam, Xbox, Epic, GOG, itch.io or Amazon brings in the games you own but have not installed. Free, with no ads and nothing sold.",
+    "homepage": "https://www.siftergames.com",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.siftergames.com/terms"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://vqwhap5sw1u1nujs.public.blob.vercel-storage.com/desktop/releases/0.3.93/Sifter-windows.exe#/Sifter-setup.exe",
+            "hash": "500a88d3e699e95ae885d9c0f34abe06e64b05d64e00adeb1b4c30cf7b2a0f83"
+        }
+    },
+    "installer": {
+        "script": [
+            "$setup = \"$dir\\Sifter-setup.exe\"",
+            "Start-Process -FilePath $setup -ArgumentList \"/S\" -Wait"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "$uninstall = \"$env:LOCALAPPDATA\\Sifter\\uninstall.exe\"",
+            "if (Test-Path $uninstall) {",
+            "  Start-Process -FilePath $uninstall -ArgumentList \"/S\" -Wait",
+            "}"
+        ]
+    },
+    "checkver": {
+        "url": "https://www.siftergames.com/api/desktop/update/windows/x86_64/0.0.1",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://vqwhap5sw1u1nujs.public.blob.vercel-storage.com/desktop/releases/$version/Sifter-windows.exe"
+            }
+        }
+    }
+}
