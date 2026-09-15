@@ -1,5 +1,5 @@
 {
-    "version": "0.3.181",
+    "version": "0.3.183",
     "description": "One library and one Play button for every game you own. Sifter puts every game you own in one library and launches any of it from one place. It finds what is installed on your PC across Steam, Epic, GOG, Xbox, EA, Ubisoft, Battle.net, Amazon and itch.io, and signing in to Steam, Xbox, Epic, GOG, itch.io or Amazon brings in the games you own but have not installed. Free, with no ads and nothing sold.",
     "homepage": "https://www.siftergames.com",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://www.siftergames.com/dl/0.3.181/Sifter-windows.exe#/Sifter-setup.exe",
-            "hash": "4ac399d43ca65c6a0e78bac002e15e6b3aff41ddc88d9cf3d3479d901be82d9b"
+            "url": "https://www.siftergames.com/dl/0.3.183/Sifter-windows.exe#/Sifter-setup.exe",
+            "hash": "4f5fcd6bfbaec7583f4852be6572839c97ea17692c0b02ae5b48d94a9bc7971d"
         }
     },
     "installer": {
